@@ -29,7 +29,7 @@ const Search = (props) => {
   const handelData = (data) => {
     return data.items.map((item) => ({
       name: item.volumeInfo.title,
-      image_url: (item.volumeInfo.imageLinks.thumbnail?item.volumeInfo.imageLinks.thumbnail:"#"),
+      image_url: (item.volumeInfo.imageLinks?item.volumeInfo.imageLinks.thumbnail:"#"),
       description: (item.volumeInfo.description?item.volumeInfo.description.slice(0, 270):"#"),
       url: item.volumeInfo.infoLink,
       rating: item.volumeInfo.averageRating,
